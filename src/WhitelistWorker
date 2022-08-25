@@ -1,0 +1,13 @@
+if game.Players.LocalPlayer:IsInGroup(13170123) then
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Saquado";
+		Text = "whitelisted!";
+		Icon = "rbxthumb://type=Asset&id=9642383655&w=150&h=150";
+	})
+end
+game.StarterGui:SetCore("SendNotification", {
+	Title = "Saquado.lua";
+	Text = "Made By lootsu";
+	Icon = "rbxthumb://type=Asset&id=9642383655&w=150&h=150";
+	Duration = 15;
+})
