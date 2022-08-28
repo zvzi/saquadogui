@@ -473,7 +473,7 @@ CombatSec:NewButton("Melee Reach", "ok.", function()
     })
 for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren())do                 if v:isA("Tool") then                     local a = Instance.new("SelectionBox",v.Handle)                     a.Adornee = v.Handle                     v.Handle.Size = Vector3.new(50,50,50)                     v.GripPos = Vector3.new(10,10,10)                     lplayer.Character.Humanoid:UnequipTools()                 end end
 end)
-CombatSec:NewButton("AntiLock (z)", "z toggle", function()
+CombatSec:NewButton("AntiLock (c)", "c toggle", function()
     game.StarterGui:SetCore("SendNotification", {
         Title = "Saquado";
         Text = "Press Z to turn on, reset to disable it!! This is used to expose aimlockers btw";
@@ -481,7 +481,7 @@ CombatSec:NewButton("AntiLock (z)", "z toggle", function()
         Duration = 15;
     })
 local Toggled = falses
-local KeyCode = 'z'
+local KeyCode = 'c'
 
 
 function AA()
