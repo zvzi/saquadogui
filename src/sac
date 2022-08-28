@@ -1,4 +1,4 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzi/saquadogui/main/src/KAVOHUB"))()
 
 local Window = Library.CreateLib("Saquado", "DarkTheme")
 local MainScpts = Window:NewTab("Main Scripts")
