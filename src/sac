@@ -1,3 +1,4 @@
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
 local Window = Library.CreateLib("Saquado", "DarkTheme")
@@ -7,6 +8,9 @@ local CombatTab = Window:NewTab("Combat")
 local Movement = MainScpts:NewSection("Main Scripts (Player Movement)") 
 local CombatSec = CombatTab:NewSection("Combat") 
 local TeleportsSec = Teleports:NewSection("Teleports")
+CombatSec:NewKeybind("close gui: V", "idk", Enum.KeyCode.V, function()
+	Library:ToggleUI()
+end)
 Movement:NewButton("Fly (x)", "press X to fly", function()
     game.StarterGui:SetCore("SendNotification", {
         Title = "Saquado";
