@@ -19,6 +19,12 @@ local ExtrasTAB = Window:NewTab("Extras")
 local ExtrasSEC = ExtrasTAB:NewSection("Extras")
 local DHCSellingTab = Window:NewTab("DHC")
 local DHCSellingSec = DHCSellingTab:NewSection("Selling Stuff")
+ExtrasSEC:NewKeybind("Toggle GUI", "ok", Enum.KeyCode.V, function()
+	Library:ToggleUI()
+end)
+DHCSellingSec:NewButton("Crostide Cash Counter", "IDK BE IN THE GROUP", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Crostide/Counter/main/Cash"))()
+end)
 -- Scripts
 
 DHCSellingSec:NewButton("Cash Aura", "ahha", function()
