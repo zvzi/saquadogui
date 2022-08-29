@@ -1,3 +1,6 @@
+if not game.Players.LocalPlayer:IsInGroup(13170123) then
+    game.Players.LocalPlayer:Kick("\n Saquado \n player not whitelisted")
+end
 if game.Players.LocalPlayer:IsInGroup(13170123) then
 	game.StarterGui:SetCore("SendNotification", {
 		Title = "Saquado";
