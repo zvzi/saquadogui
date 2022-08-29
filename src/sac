@@ -1,14 +1,96 @@
+-- anti afk
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+    game:GetService("VirtualUser"):Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+    wait(1)
+    game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+-- Libraries
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzi/saquadogui/main/src/KAVOHUB"))()
-
 local Window = Library.CreateLib("Saquado", "DarkTheme")
 local MainScpts = Window:NewTab("Main Scripts")
 local TPS = Window:NewTab("Teleports")
 local CombatTab = Window:NewTab("Combat")
-local Movement = MainScpts:NewSection("Main Scripts (Player Movement)") 
+local Movement = MainScpts:NewSection("Main Scripts — Player Movement") 
 local CombatSec = CombatTab:NewSection("Combat") 
 local TPSection = TPS:NewSection("Teleports")
 local AltCtrlTAB = Window:NewTab("Alt Control")
 local AltCtrlSEC = AltCtrlTAB:NewSection("Alt Control Commands")
+local ExtrasTAB = Window:NewTab("Extras")
+local ExtrasSEC = ExtrasTAB:NewSection("Extras")
+local DHCSellingTab = Window:NewTab("DHC")
+local DHCSellingSec = DHCSellingTab:NewSection("Selling Stuff")
+-- Scripts
+
+DHCSellingSec:NewButton("Cash Aura", "ahha", function()
+local localPlayer = game:GetService("Players").LocalPlayer
+local function booga()
+local closestPlayer = nil
+local shortestDistance = math.huge
+for i, v in pairs(game:GetService("Workspace").Ignored.Drop:GetChildren()) do
+if v:FindFirstChild("ClickDetector") then
+local magnitude = (v.Position - localPlayer.Character.Head.Position).magnitude
+if magnitude < shortestDistance then
+closestPlayer = v
+shortestDistance = magnitude
+end
+end
+end
+return closestPlayer
+end
+game:GetService"RunService".RenderStepped:Connect(function()
+fireclickdetector(booga():FindFirstChild("ClickDetector"))
+end)
+end)
+
+CombatSec:NewButton("FreeFist (T)", "k", function()
+    local Plr = game.Players.LocalPlayer
+local Mouse = Plr:GetMouse()
+local HRPPosition = Plr.Character.HumanoidRootPart.CFrame
+local Hand = Plr.Character.RightHand
+local HandPosition = Hand.Position
+local HandCFrame = Hand.CFrame
+if Hand:FindFirstChild("RightWrist") then
+	Hand.RightWrist:Destroy()
+end
+repeat
+	wait()
+	Hand.Position = Vector3.new(Mouse.Hit.x, Mouse.Hit.Y, Mouse.Hit.z)
+	--Hand.CFrame = Mouse.Hit
+until game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.T)
+
+Plr.Character.HumanoidRootPart.CFrame = HRPPosition
+
+Hand.Position = HandPosition
+Hand.CFrame = HandCFrame
+end)
+
+Movement:NewButton("Inf Jump", "OK", function()
+    -- // Services
+local Players = game:GetService("Players")
+
+-- // Vars
+local LocalPlayer = Players.LocalPlayer
+
+-- // Disable Jump Limit
+function rJumpLimit(Character)
+    local connections = getconnections(Character.Humanoid.Jumping)
+
+    for i = 1, #connections do
+        local connection = connections[i]
+        if (getfenv(connection.Function).script.Name == "Framework") then
+            connection:Disable()
+        end
+    end
+end
+
+-- //
+rJumpLimit(LocalPlayer.Character)
+LocalPlayer.CharacterAdded:Connect(function(Character)
+    LocalPlayer.PlayerGui:WaitForChild("Framework")
+    rJumpLimit(Character)
+end)
+end)
+
 AltCtrlSEC:NewLabel("won't work if your prefix isn't a period")
 AltCtrlSEC:NewLabel("make sure you're actually using an alt control btw lolo")
 AltCtrlSEC:NewButton("Start Drop", "makes ur alts drop lool?", function()
@@ -46,6 +128,9 @@ AltCtrlSEC:NewButton("Make All Alts Sit Down", "k?", function()
 end)
 AltCtrlSEC:NewButton("BDH Crash", "k?", function()
     game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(".crash bdh", "All")
+end)
+AltCtrlSEC:NewButton("MAKE ALTS DANCE", "k?", function()
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(".vibe", "All")
 end)
 
 TPSection:NewButton("Food Store", "Food Store Outer", function()
