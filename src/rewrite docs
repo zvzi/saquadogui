@@ -1,0 +1,12 @@
+-- toggles
+Mains:CreateToggle("Toggle Info", function(state)
+    print(state)
+end)
+-- keybinds
+Mains:CreateBind("Keybind Info", Enum.KeyCode.F, function()
+    print("Keybind Was Pressed")
+end)
+-- slider
+Mains:CreateSlider(16, 500, "Slider Info", function(val)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = val
+end)
