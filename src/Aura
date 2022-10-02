@@ -1,5 +1,3 @@
-    getgenv().Collecting = true
-    while Collecting == true do
 local localPlayer = game:GetService("Players").LocalPlayer
 local function booga()
 local closestPlayer = nil
