@@ -1,7 +1,7 @@
   function view(t)
     wait()
     if game.Players:FindFirstChild(t) then
-      if game.Players[plr].Character then
+      if game.Players[t].Character then
         game.Workspace:FindFirstChildWhichIsA('Camera').CameraSubject = game.Players:FindFirstChild(t).Character.HumanoidRootPart
       end
     end
