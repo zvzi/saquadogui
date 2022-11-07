@@ -1,9 +1,11 @@
-  function view(t)
+function view(plr)
     wait()
     if game.Players:FindFirstChild(t) then
-      if game.Players(t).Character then
-        game.Workspace:FindFirstChildWhichIsA('Camera').CameraSubject = game.Players:FindFirstChild(t).Character.HumanoidRootPart
+      if game.Players[plr].Character then
+        game.Workspace:FindFirstChildWhichIsA('Camera').CameraSubject = game.Players:FindFirstChild[plr].Character.HumanoidRootPart
+        repeat view(t) until (t) == ''
+        game.Workspace:FindFirstChildWhichIsA('Camera').CameraSubject = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA('Humanoid')
       end
     end
   end
-end)
+end
