@@ -1,8 +1,0 @@
-function view(t)
-    wait()
-    if game.Players:FindFirstChild(plr) then
-        if game.Players(plr).Character then
-        game.Workspace:FindFirstChildWhichIsA('Camera').CameraSubject = game.Players:FindFirstChild(plr).Character.LowerTorso
-        end
-    end
-end
