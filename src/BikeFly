@@ -1,4 +1,4 @@
-local speed = 20
+local speed = 45
 local old
 local Plr = game.Players.LocalPlayer
 local wheels = {}
