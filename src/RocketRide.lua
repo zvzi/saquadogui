@@ -1,5 +1,5 @@
 -- SETTINGS --
-local speed = 35
+local speed = 20
 local turnSpeed = 3
 --------------
 
