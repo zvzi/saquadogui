@@ -1,5 +1,5 @@
 -- note that this is not the anti lock used in the gui, it is the antilock used in the old gui..
--- if you're looking for the updated non-blatant anti aim, look for "AntiAim.lua" in src :)
+-- if you're looking for the updated non-blatant ground anti aim made by me, look for "AntiAim.lua" in src :)
 
 local Toggled = false
 local KeyCode = 'z'
