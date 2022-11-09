@@ -1,3 +1,5 @@
+local Plr = game.Players.LocalPlayer
+local LastPos = Plr.Character.HumanoidRootPart.CFrame
 	Plr.Character.Humanoid:UnequipTools()
 	wait(0.1)
 	Plr.Character.Humanoid:EquipTool(Plr.Backpack["[Bat]"])
