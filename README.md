@@ -1,6 +1,6 @@
 # saquadogui
 ```
-hello! this is my personal private gui for da hood,
++ hello! this is my personal private gui for da hood,
 open to a selected few friends only. 
 feel free to use the scripts here, all scripts other than AntiAim.lua, Tps.lua, and Spectatee.lua,
 do not belong to me. everything goes to it's respective owners!!!!! thx
