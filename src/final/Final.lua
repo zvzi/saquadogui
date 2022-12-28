@@ -2,8 +2,6 @@ local SaquadoLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bl
 
 -- // CHECK USER
 loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzi/saquadogui/main/src/emoji.lua"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/zvzi/saquadogui/main/src/IndentityCheckerWH.lua"))() -- only a webhook to identify users by zvzi. doesnt log ips or any weird stuff lol
-
 local win = SaquadoLib:New({
   Name = "Saquado",
   FolderToSave = "Saquado Data"
